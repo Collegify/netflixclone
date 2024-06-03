@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Home</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: #fff;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #141414;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .navbar img {
+            height: 40px;
+        }
+        .main-feature {
+            position: relative;
+            height: 80vh;
+            background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+        .main-feature .info {
+            max-width: 600px;
+        }
+        .main-feature h1 {
+            font-size: 3rem;
+        }
+        .main-feature button {
+            background-color: rgba(51, 51, 51, 0.7);
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            cursor: pointer;
+        }
+        .main-feature button:hover {
+            background-color: rgba(51, 51, 51, 0.5);
+        }
+        .content {
+            padding: 20px;
+            margin-top: 60px;
+        }
+        .swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .swiper-slide {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            border-radius: 10px;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo">
+        <div>
+            <a href="#">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Movies</a>
+            <a href="#">New & Popular</a>
+            <a href="#">My List</a>
+            <a href="#">Browse by Languages</a>
+        </div>
+    </div>
+    <div class="main-feature">
+        <div class="info">
+            <h1>CREW</h1>
+            <button>Play</button>
+            <button>More Info</button>
+        </div>
+    </div>
+    <div class="content">
+        <h2>Your Next Watch</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://via.placeholder.com/300x450/111111/FFFFFF?text=Movie+1" alt="Movie 1"></div>
+                <div class="swiper-slide"><img src="https://via.placeholder.com/300x450/222222/FFFFFF?text=Movie+2" alt="Movie 2"></div>
+                <div class="swiper-slide"><img src="https://via.placeholder.com/300x450/333333/FFFFFF?text=Movie+3" alt="Movie 3"></div>
+                <div class="swiper-slide"><img src="https://via.placeholder.com/300x450/444444/FFFFFF?text=Movie+4" alt="Movie 4"></div>
+                <div class="swiper-slide"><img src="https://via.placeholder.com/300x450/555555/FFFFFF?text=Movie+5" alt="Movie 5"></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 5,
+            spaceBetween: 10,
+            slidesPerGroup: 5,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>
